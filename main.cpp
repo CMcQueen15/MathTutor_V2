@@ -16,10 +16,16 @@ using namespace std;
 int main()
 {
     string name;
+    int leftNum = 0;
+    int rightNum = 0;
+    int mathType = 0;
+    int userAnswer = 0;
+    int correctAnswer = 0;
+    string userName = "?";
+    char mathSymbol = '?';
+
+    // Seed the random number generator
     srand(time(0));
-    int leftn = rand() % 10 + 1;
-    int rightn = rand() % 10 + 1;
-    int answer;
     
 
     //   /\  Input any new values here please!
