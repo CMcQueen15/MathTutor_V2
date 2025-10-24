@@ -16,8 +16,8 @@ using namespace std;
 int main()
 {
     string name;
-    int leftNum = 0;
-    int rightNum = 0;
+    int leftn = 0;
+    int rightn = 0;
     int mathType = 0;
     int userAnswer = 0;
     int correctAnswer = 0;
@@ -47,6 +47,11 @@ int main()
     cout << name << ". Lets learn some math!!!" << endl;
     // This is the introduction of the program before the math. Only one string value used.
     cout << endl << endl;
+
+    // Generate random numbers
+    leftn = rand() % 10 + 1;
+    rightn = rand() % 10 + 1;
+    mathType = rand() % 4 + 1;
 
     cout << "What is " << leftn << " + " << rightn << "?" << endl;
     // Asking the big question
