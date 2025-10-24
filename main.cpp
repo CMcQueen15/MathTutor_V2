@@ -8,23 +8,27 @@
 */
 
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 
 using namespace std;
 
 int main()
 {
     string name;
-    int leftn = 5;
-    int rightn = 6;
+    srand(time(0));
+    int leftn = rand() % 10 + 1;
+    int rightn = rand() % 10 + 1;
     int answer;
+    
 
     //   /\  Input any new values here please!
     cout << "*********************************" << endl;
-    cout << "__  __       _   _       _____      _              __     ___ \n";
-    cout << "|  \\/  | __ _| |_| |__   |_   _|   _| |_ ___  _ __  \\ \\   / / |\n";
-    cout << "| |\\/| |/ _` | __| '_ \\    | || | | | __/ _ \\| '__|  \\ \\ / /| |\n";
-    cout << "| |  | | (_| | |_| | | |   | || |_| | || (_) | |      \\ V / | |\n";
-    cout << "|_|  |_|\\__,_|\\__|_| |_|   |_| \\__,_|\\__\\___/|_|       \\_/  |_|\n";
+    cout << "__  __       _   _       _____      _              \n";
+    cout << "|  \\/  | __ _| |_| |__   |_   _|   _| |_ ___  _ __ \n";
+    cout << "| |\\/| |/ _` | __| '_ \\    | || | | | __/ _ \\| '__| \n";
+    cout << "| |  | | (_| | |_| | | |   | || |_| | || (_) | |      \n";
+    cout << "|_|  |_|\\__,_|\\__|_| |_|   |_| \\__,_|\\__\\___/|_|     \n";
 
     cout << endl << "*********************************" << endl;
     cout << "Math is good for your brain." << endl;
