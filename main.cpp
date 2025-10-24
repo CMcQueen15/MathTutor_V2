@@ -55,32 +55,36 @@ int main()
 
     // Switch based on math type
     switch (mathType) {
-        case 1:
+        case 1: // Addition
             mathSymbol = '+';
             correctAnswer = leftn + rightn;
             break;
-        case 2:
+        case 2: // Subtraction (no negatives)
+            if (leftn < rightn) {
+                int temp = leftn;
+                leftn = rightn;
+                rightn = temp;
+            }
             mathSymbol = '-';
             correctAnswer = leftn - rightn;
             break;
-        case 3:
+        case 3: // Multiplication
             mathSymbol = '*';
             correctAnswer = leftn * rightn;
             break;
-        case 4:
+        case 4: // Division (no remainder)
+            rightn = rand() % 9 + 1; // 1 to 9 (avoid zero)
+            correctAnswer = rand() % 10 + 1; // quotient: 1 to 10
+            leftn = rightn * correctAnswer; // ensures no remainder
             mathSymbol = '/';
-            // Avoid divide-by-zero and force integer division
-            if (rightn == 0) rightn = 1;
-            correctAnswer = leftn / rightn;
             break;
         default:
             cout << "Invalid math type generated!" << endl;
             
             return -1;
     }
-    
-    cout << "Thank you for using our beta version of Math Tutor! More is on the way." << endl;
-
-
+    // Ask the math question
+    cout << userName << "what is " << leftn << " " << mathSymbol << " " << rightn << " = ";
+    cin >> userAnswer;
     return 0;
 }
