@@ -4,7 +4,12 @@
 * Date: 2025.10.23
 * Github: https://github.com/CMcQueen15/MathTutorV2
 * Description: An easy math tutor for students to use
-                *
+                *More includes
+                *More Int
+                *Asks for name
+                *Random numbers and math symbols
+                *Asks Question
+                *Lets you know if you got it right
 */
 
 #include <iostream>
