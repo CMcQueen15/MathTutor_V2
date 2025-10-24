@@ -53,10 +53,31 @@ int main()
     rightn = rand() % 10 + 1;
     mathType = rand() % 4 + 1;
 
-    cout << "What is " << leftn << " + " << rightn << "?" << endl;
-    // Asking the big question
-    cin >> answer;
-    // Getting an answer for the question
+    // Switch based on math type
+    switch (mathType) {
+        case 1:
+            mathSymbol = '+';
+            correctAnswer = leftn + rightn;
+            break;
+        case 2:
+            mathSymbol = '-';
+            correctAnswer = leftn - rightn;
+            break;
+        case 3:
+            mathSymbol = '*';
+            correctAnswer = leftn * rightn;
+            break;
+        case 4:
+            mathSymbol = '/';
+            // Avoid divide-by-zero and force integer division
+            if (rightn == 0) rightn = 1;
+            correctAnswer = leftn / rightn;
+            break;
+        default:
+            cout << "Invalid math type generated!" << endl;
+            
+            return -1;
+    }
     
     cout << "Thank you for using our beta version of Math Tutor! More is on the way." << endl;
 
