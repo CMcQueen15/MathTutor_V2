@@ -84,7 +84,18 @@ int main()
             return -1;
     }
     // Ask the math question
-    cout << userName << "what is " << leftn << " " << mathSymbol << " " << rightn << " = ";
+    cout << userName << " What is " << leftn << " " << mathSymbol << " " << rightn << " = ";
     cin >> userAnswer;
+
+    // Check the answer
+    if (userAnswer == correctAnswer) {
+        cout << "Congrats, " << userName << "! You got it right!" << endl;
+    } else {
+        cout << "Boohoo! The correct answer was " << correctAnswer << "." << endl;
+    }
+
+    // Thank the user
+    cout << "Thanks for playing Math Tutor!" << endl;
+
     return 0;
 }
